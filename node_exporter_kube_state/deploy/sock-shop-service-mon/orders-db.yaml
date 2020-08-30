@@ -5,7 +5,7 @@ metadata:
   labels:
     name: front-end
     k8s-app: front-end
-  namespace: monitoring
+  namespace: sock-shop
 spec:
   jobLabel: name
   selector:

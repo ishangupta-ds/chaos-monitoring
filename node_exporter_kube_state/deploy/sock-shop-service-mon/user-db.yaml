@@ -5,7 +5,7 @@ metadata:
   labels:
     name: user-db
     k8s-app: user-db
-  namespace: monitoring
+  namespace: sock-shop
 spec:
   jobLabel: name
   selector:
