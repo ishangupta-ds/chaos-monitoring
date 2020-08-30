@@ -41,4 +41,6 @@ spec:
       - kube-state-metrics
       - apiserver
       - kubelet
+      - chaos-exporter
+      - litmus-event-router
   
