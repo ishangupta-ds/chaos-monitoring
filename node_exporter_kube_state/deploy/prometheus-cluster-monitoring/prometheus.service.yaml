@@ -4,7 +4,7 @@ metadata:
   labels:
     prometheus: k8s
   name: prometheus-k8s
-  namespace: litmus-monitoring
+  namespace: monitoring
 spec:
   ports:
   - name: web
@@ -13,4 +13,5 @@ spec:
   selector:
     app: prometheus
     prometheus: k8s
-  sessionAffinity: ClientIP
+  sessionAffinity: None
+  type: LoadBalancer

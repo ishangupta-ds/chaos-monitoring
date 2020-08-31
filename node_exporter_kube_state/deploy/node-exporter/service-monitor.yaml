@@ -6,7 +6,7 @@ metadata:
     app.kubernetes.io/version: v0.18.1
     k8s-app: node-exporter
   name: node-exporter
-  namespace: litmus-monitoring
+  namespace: monitoring
 spec:
   endpoints:
   - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token

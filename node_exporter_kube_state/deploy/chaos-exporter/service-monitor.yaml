@@ -3,16 +3,16 @@ kind: ServiceMonitor
 metadata:
   name: chaos-exporter
   labels:
-    k8s-app: chaos-monitor
-  namespace: monitoring
+    k8s-app: chaos-exporter
+  namespace: litmus
 spec:
-  jobLabel: name
+  jobLabel: app
   selector:
     matchLabels:
-      name: chaos-monitor
+      app: chaos-monitor
   namespaceSelector:
     matchNames:
     - litmus
   endpoints:
-  - port: web
+  - port: tcp
     interval: 1s

@@ -6,7 +6,7 @@ metadata:
     app.kubernetes.io/version: 1.9.5
     k8s-app: kube-state-metrics
   name: kube-state-metrics
-  namespace: litmus-monitoring
+  namespace: monitoring
 spec:
   endpoints:
   - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token

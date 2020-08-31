@@ -4,7 +4,7 @@ metadata:
   labels:
     alertmanager: main
   name: main
-  namespace: litmus-monitoring
+  namespace: monitoring
 spec:
   image: quay.io/prometheus/alertmanager:v0.21.0
   nodeSelector:

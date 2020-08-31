@@ -63,6 +63,7 @@ spec:
   ports:
     # the port that this service should serve on
   - port: 80
+    name: web
     targetPort: 80
   selector:
     name: user

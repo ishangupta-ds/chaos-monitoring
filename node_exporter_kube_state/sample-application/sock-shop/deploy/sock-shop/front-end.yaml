@@ -62,6 +62,7 @@ spec:
   type: LoadBalancer
   ports:
   - port: 80
+    name: web
     targetPort: 8079
     nodePort: 30001
   selector:
