@@ -5,7 +5,7 @@ metadata:
   labels:
     name: catalogue-db
     k8s-app: catalogue-db
-  namespace: monitoring
+  namespace: sock-shop
 spec:
   jobLabel: name
   selector:

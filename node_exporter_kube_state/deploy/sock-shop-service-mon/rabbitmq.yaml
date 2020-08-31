@@ -5,7 +5,7 @@ metadata:
   labels:
     name: rabbitmq
     k8s-app: rabbitmq
-  namespace: monitoring
+  namespace: sock-shop
 spec:
   jobLabel: name
   selector:

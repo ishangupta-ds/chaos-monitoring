@@ -4,13 +4,14 @@ metadata:
   labels:
     prometheus: k8s
   name: k8s
-  namespace: litmus-monitoring
 spec:
   alerting:
     alertmanagers:
     - name: alertmanager-main
       namespace: litmus-monitoring
       port: web
+  externalLabels:
+    cluster: docker-desktop
   image: quay.io/prometheus/prometheus:v2.19.2
   nodeSelector:
     kubernetes.io/os: linux
@@ -20,18 +21,16 @@ spec:
   resources:
     requests:
       memory: 400Mi
-  externalLabels:
-    cluster: docker-desktop
-  serviceAccountName: prometheus-k8s
-  version: v2.19.2
   ruleSelector:
     matchLabels:
-      role: alert-rules
       prometheus: k8s
+      role: alert-rules
   securityContext:
     fsGroup: 2000
     runAsNonRoot: true
     runAsUser: 1000
+  serviceAccountName: prometheus-k8s
+  serviceMonitorNamespaceSelector: {}
   serviceMonitorSelector:
     matchExpressions:
     - key: k8s-app
@@ -41,6 +40,18 @@ spec:
       - kube-state-metrics
       - apiserver
       - kubelet
-      - chaos-exporter
+      - carts
+      - carts-db
+      - shipping
+      - rabbitmq
+      - queue-master
+      - catalogue-db
+      - catalogue
+      - front-end
+      - orders-db
+      - orders
+      - payment
+      - user-db
+      - user
       - litmus-event-router
-  
+  version: v2.19.2
