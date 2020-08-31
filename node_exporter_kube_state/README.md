@@ -96,9 +96,9 @@ Chaos experiments on sock-shop app with grafana dashboard to monitor it.
 
 - Add the prometheus datasource from monitoring namespace as DS_PROMETHEUS for Grafana via the Grafana Settings menu
 
-- Import the grafana dashboard "Sock-Shop Performance" provided [here](https://raw.githubusercontent.com/ishangupta-ds/chaos-monitoring/master/grafana-dashboards/node-and-pod-chaos-demo.json)
+- Import the grafana dashboard "Sock-Shop Performance" provided [here](https://raw.githubusercontent.com/ishangupta-ds/chaos-monitoring/master/node_exporter_kube_state/grafana-dashboards/sock-shop-performance.json)
 
-- Import the grafana dashboard "Node and Pod Chaos Demo" provided [here](https://raw.githubusercontent.com/ishangupta-ds/chaos-monitoring/master/grafana-dashboards/sock-shop-performance.json)
+- Import the grafana dashboard "Node and Pod Chaos Demo" provided [here](https://raw.githubusercontent.com/ishangupta-ds/chaos-monitoring/master/node_exporter_kube_state/grafana-dashboards/node-and-pod-chaos-demo.json)
 
 
 ## Step-4: Execute the Chaos Experiments
