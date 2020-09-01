@@ -18,7 +18,7 @@ spec:
     - name: pod-memory-hog
       spec:
         components:
-          image: "litmuschaos/go-runner:ci"
+          experimentImage: "litmuschaos/go-runner:ci"
           env:
             - name: TARGET_CONTAINER
               value: 'orders'
