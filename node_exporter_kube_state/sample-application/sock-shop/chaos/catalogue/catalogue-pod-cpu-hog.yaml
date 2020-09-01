@@ -18,6 +18,7 @@ spec:
     - name: pod-cpu-hog
       spec:
         components:
+          image: "litmuschaos/go-runner:ci"
           env:
             - name: TARGET_CONTAINER
               value: 'catalogue'
